@@ -1,0 +1,83 @@
+/* RTL (Right to Left) Mirroring Stylesheet */
+
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+/* Navigation items mirror */
+html[dir="rtl"] .logo-link {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .logo-icon {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .nav-actions {
+  flex-direction: row-reverse;
+}
+
+/* Centering overrides on mobile still apply in RTL */
+@media (max-width: 1024px) {
+  html[dir="rtl"] body, 
+  html[dir="rtl"] .hero-content, 
+  html[dir="rtl"] .section-header, 
+  html[dir="rtl"] .footer, 
+  html[dir="rtl"] .card, 
+  html[dir="rtl"] .footer-grid, 
+  html[dir="rtl"] .diagnostic-wizard {
+    text-align: center !important;
+  }
+}
+
+/* Arrow/caret icons mirror */
+html[dir="rtl"] .ph-arrow-right,
+html[dir="rtl"] .ph-caret-right,
+html[dir="rtl"] .ph-arrow-square-out {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Card details mirroring */
+html[dir="rtl"] .card {
+  text-align: right;
+}
+
+/* Form text alignment */
+html[dir="rtl"] .form-group {
+  text-align: right;
+}
+
+/* Table element mirror */
+html[dir="rtl"] th,
+html[dir="rtl"] td {
+  text-align: right;
+}
+
+/* Breadcrumbs slash/separator mirror */
+html[dir="rtl"] .breadcrumb-separator {
+  transform: scaleX(-1);
+}
+
+/* Step Wizard elements */
+html[dir="rtl"] .step-number {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+/* Password toggle mirroring */
+html[dir="rtl"] .password-wrapper .form-control {
+  padding-left: 44px;
+  padding-right: 16px;
+}
+
+html[dir="rtl"] .eye-toggle {
+  left: 12px;
+  right: auto;
+}
+

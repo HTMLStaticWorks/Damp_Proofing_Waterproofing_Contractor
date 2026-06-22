@@ -1,0 +1,50 @@
+/* Premium Dark Theme Overrides */
+body.dark-theme {
+  --bg-primary: #0C1118;
+  --bg-secondary: #15202B;
+  --bg-card: #1D2B38;
+  --accent-primary: #1B9AAA;
+  --accent-secondary: #57CC99;
+  --accent-third: #E9C46A;
+  --accent-premium: #5D7C95;
+  --text-primary: #F8FAFC;
+  --text-secondary: #C9D5E2;
+  --border: rgba(255, 255, 255, 0.08);
+  --glow: rgba(27, 154, 170, 0.18);
+  --shadow: rgba(0, 0, 0, 0.4);
+  
+  --bg-card-rgb: 29, 43, 56;
+}
+
+/* Glassmorphism adjustments for Dark Mode */
+body.dark-theme .navbar {
+  background: rgba(21, 32, 43, 0.75);
+}
+
+/* Scrollbar styling for Dark Mode */
+body.dark-theme ::-webkit-scrollbar {
+  width: 10px;
+}
+
+body.dark-theme ::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb {
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--bg-primary);
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Grid & Card structural adjustments for dark mode */
+body.dark-theme .card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .card:hover {
+  box-shadow: 0 15px 35px var(--glow);
+}
