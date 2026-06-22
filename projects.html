@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Showcase | HydroShield Engineering</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <!-- SEO tags -->
+  <meta name="description"
+    content="View our portfolio of residential and commercial structural waterproofing, basement drainage, and plastering projects.">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body class="dark-theme">
+
+  <!-- Floating Glass Navbar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" id="main-nav">
+      <a href="index.html" class="logo-link">
+        <i class="ph ph-shield-checkered logo-icon"></i>
+        <span>HydroShield</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle Menu">
+        <i class="ph ph-list"></i>
+      </button>
+
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="home-dropdown">Home <i class="ph ph-caret-down"></i></a>
+          <ul class="dropdown-menu" id="home-menu">
+            <li><a href="index.html" class="dropdown-item">Home 1</a></li>
+            <li><a href="home-2.html" class="dropdown-item">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="rising-damp.html" class="nav-link">Rising Damp</a></li>
+        <li><a href="condensation-control.html" class="nav-link">Condensation</a></li>
+        <li><a href="waterproofing-solutions.html" class="nav-link">Waterproofing</a></li>
+        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        <button class="toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="ph ph-sun"></i>
+        </button>
+        <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Inner Header -->
+  <div
+    style="padding: 160px 20px 60px; background: var(--bg-secondary); text-align: center; border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <span class="section-subtitle">Case Studies</span>
+      <h2>Completed Structural Projects</h2>
+      <p style="max-width: 600px; margin: 10px auto 0; font-size: 18px;">Engineering-grade property protection jobs
+        carried out across domestic and retail assets.</p>
+    </div>
+  </div>
+
+  <!-- Projects Filtering Section -->
+  <section class="section" id="projects-grid-section">
+    <div class="container">
+      <!-- Filter controls -->
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px;">
+        <button class="btn btn-secondary filter-btn active" data-filter="all">All Projects</button>
+        <button class="btn btn-secondary filter-btn" data-filter="damp">Damp Proofing</button>
+        <button class="btn btn-secondary filter-btn" data-filter="waterproofing">Waterproofing</button>
+        <button class="btn btn-secondary filter-btn" data-filter="basement">Basement Systems</button>
+      </div>
+
+      <div class="card-grid card-grid-3col" id="projects-masonry">
+
+        <!-- Project 1 -->
+        <div class="card project-item" data-category="basement" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/cellar.jpg" alt="Basement Vault System"
+            style="width: 100%; height: 220px; object-fit: cover;">
+          <div style="padding: 30px;">
+            <h3 class="card-title">Cellar Drainage System</h3>
+            <p class="card-text">Complete Type C cavity drainage membrane, channels, and backup sump pump layout inside
+              a residential basement vault.</p>
+            <div class="card-footer" style="padding: 0;">
+              <a href="project-details.html" class="btn btn-secondary">Case Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card project-item" data-category="damp" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/historic.jpg" alt="Damp Inspection Survey"
+            style="width: 100%; height: 220px; object-fit: cover;">
+          <div style="padding: 30px;">
+            <h3 class="card-title">Historic Hall Injection</h3>
+            <p class="card-text">Specialist pressure injection of waterproofing cream along mortar beds to resolve
+              ascending groundwater.</p>
+            <div class="card-footer" style="padding: 0;">
+              <a href="project-details.html" class="btn btn-secondary">Case Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card project-item" data-category="waterproofing" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/brickwork.jpg" alt="Exterior Brick Sealing"
+            style="width: 100%; height: 220px; object-fit: cover;">
+          <div style="padding: 30px;">
+            <h3 class="card-title">Brickwork Repointing</h3>
+            <p class="card-text">Raking old sand lime joints, repointing, and applying hydrophobic breathable cream
+              barriers to stop.</p>
+            <div class="card-footer" style="padding: 0;">
+              <a href="project-details.html" class="btn btn-secondary">Case Details</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Completed Project Metrics Section -->
+  <section class="section-alt" id="project-stats">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Performance Metrics</span>
+        <h2>Our Preservation Record</h2>
+        <p>A statistical overview of our structural building preservation and waterproofing project achievements.</p>
+      </div>
+
+      <div class="results-grid">
+        <div class="card" style="padding: 30px;">
+          <div style="font-size: 44px; font-weight: 600; color: var(--accent-primary); margin-bottom: 8px;">12,400+
+          </div>
+          <p style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Damp
+            Surveys Completed</p>
+        </div>
+        <div class="card" style="padding: 30px;">
+          <div style="font-size: 44px; font-weight: 600; color: var(--accent-primary); margin-bottom: 8px;">350k m²
+          </div>
+          <p style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">
+            Dry-Space Membranes Laid</p>
+        </div>
+        <div class="card" style="padding: 30px;">
+          <div style="font-size: 44px; font-weight: 600; color: var(--accent-primary); margin-bottom: 8px;">1,200+</div>
+          <p style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">
+            Historic Buildings Saved</p>
+        </div>
+        <div class="card" style="padding: 30px;">
+          <div style="font-size: 44px; font-weight: 600; color: var(--accent-primary); margin-bottom: 8px;">100%</div>
+          <p style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">PCA
+            Code Compliance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Customer Stories Section -->
+  <section class="section" id="project-testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Client Reviews</span>
+        <h2>Detailed Case Feedback</h2>
+        <p>Read detailed reviews from property owners who experienced our structural restoration firsthand.</p>
+      </div>
+
+      <div class="card-grid card-grid-3col">
+        <!-- Story 1 -->
+        <div class="card">
+          <div style="display: flex; gap: 4px; color: var(--accent-third); margin-bottom: 12px;">
+            <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i
+              class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
+          </div>
+          <h3 style="font-size: 18px; margin-bottom: 10px;">Commercial Cellar Recovery</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 15px;">"We had continuous groundwater
+            ingress in our retail basement storage. HydroShield installed a Type C cavity drain membrane and sump. The
+            cellar has remained perfectly dry through two winter seasons."</p>
+          <span style="font-size: 13px; font-weight: 600; color: var(--accent-primary);">- David G., Retail Operations
+            Manager</span>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="card">
+          <div style="display: flex; gap: 4px; color: var(--accent-third); margin-bottom: 12px;">
+            <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i
+              class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
+          </div>
+          <h3 style="font-size: 18px; margin-bottom: 10px;">Period Property DPC Injection</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 15px;">"Our Victorian cottage suffered
+            from severe rising damp salt damage. The team injected their silane DPC cream and stripped the plaster back.
+            Powdery salts have vanished and the walls look brand new."</p>
+          <span style="font-size: 13px; font-weight: 600; color: var(--accent-primary);">- Helen S., Cottage
+            Owner</span>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="card">
+          <div style="display: flex; gap: 4px; color: var(--accent-third); margin-bottom: 12px;">
+            <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i
+              class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
+          </div>
+          <h3 style="font-size: 18px; margin-bottom: 10px;">Loft Condensation Solved</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 15px;">"Black mold was spreading in
+            our bedrooms due to loft condensation. HydroShield fitted a Positive Input Ventilation system. Within three
+            days, the condensation cleared and the air feels clean."</p>
+          <span style="font-size: 13px; font-weight: 600; color: var(--accent-primary);">- Robert K., Residential
+            Customer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 25-Year Structural Guarantee Section -->
+  <section class="section-alt" id="project-warranty-info">
+    <div class="container">
+      <div class="grid-2col-responsive">
+        <div>
+          <img src="assets/images/guarentee.jpg" alt="Guarantee Certificate Security"
+            style="width: 100%; border-radius: var(--radius-lg); box-shadow: 0 10px 30px var(--shadow);">
+        </div>
+        <div>
+          <span class="section-subtitle">Security & Cover</span>
+          <h2>25-Year Structural Guarantee</h2>
+          <p style="margin-bottom: 20px;">We stand behind our materials and installation engineering. Every chemical DPC
+            injection, tanking coating, and cavity drain setup is backed by our signature 25-year structural guarantee.
+            This certificate is registered with building authorities and is fully transferable to new owners when you
+            sell your property.</p>
+
+          <div class="grid-2col-mobile-stack">
+            <div
+              style="background: var(--bg-card); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+              <h4 style="font-size: 15px; margin-bottom: 6px; color: var(--accent-primary);"><i
+                  class="ph ph-arrows-left-right" style="margin-right: 6px;"></i> Fully Transferable</h4>
+              <p style="font-size: 12px; color: var(--text-secondary);">No transfer fees to pass structural cover to
+                prospective buyers.</p>
+            </div>
+            <div
+              style="background: var(--bg-card); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+              <h4 style="font-size: 15px; margin-bottom: 6px; color: var(--accent-primary);"><i class="ph ph-bank"
+                  style="margin-right: 6px;"></i> PCA Backed</h4>
+              <p style="font-size: 12px; color: var(--text-secondary);">Insurance-backed guarantee schemes that protect
+                you under standard PCA codes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <i class="ph ph-shield-checkered logo-icon"></i>
+          <span>HydroShield</span>
+        </div>
+        <p class="footer-text">Premium architectural protection and moisture engineering services. Shielding property
+          values for over 25 years.</p>
+        <div style="display: flex; gap: 12px; font-size: 20px; margin-top: 15px;">
+          <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-title">Our Services</h3>
+        <ul class="footer-menu">
+          <li class="footer-item"><a href="rising-damp.html" class="footer-link">Rising Damp Treatment</a></li>
+          <li class="footer-item"><a href="condensation-control.html" class="footer-link">Condensation & Mold</a></li>
+          <li class="footer-item"><a href="waterproofing-solutions.html" class="footer-link">Basement Waterproofing</a>
+          </li>
+          <li class="footer-item"><a href="services.html" class="footer-link">Timber Preservation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Help & Info</h3>
+        <ul class="footer-menu">
+          <li class="footer-item"><a href="about.html" class="footer-link">About Us</a></li>
+          <li class="footer-item"><a href="faq.html" class="footer-link">FAQ Guide</a></li>
+          <li class="footer-item"><a href="contact.html" class="footer-link">Book Inspection</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact Info</h3>
+        <ul class="footer-menu">
+          <li class="footer-item" style="color: var(--text-secondary); font-size: 14px; margin-bottom: 10px;">
+            <i class="ph ph-phone" style="color: var(--accent-primary); margin-right: 8px;"></i>0800 123 4567
+          </li>
+          <li class="footer-item" style="color: var(--text-secondary); font-size: 14px; margin-bottom: 10px;">
+            <i class="ph ph-envelope" style="color: var(--accent-primary); margin-right: 8px;"></i>info@hydroshield.com
+          </li>
+          <li class="footer-item" style="color: var(--text-secondary); font-size: 14px; margin-bottom: 10px;">
+            <i class="ph ph-map-pin" style="color: var(--accent-primary); margin-right: 8px;"></i>Manchester, UK
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 HydroShield Building Protection. All rights reserved.</span>
+      <div style="display: flex; gap: 20px; font-size: 14px;">
+        <a href="login.html" class="footer-link">Staff Login</a>
+        <a href="signup.html" class="footer-link">Sign Up</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <style>
+    /* Style controls for filter states */
+    .filter-btn.active {
+      background-color: var(--accent-primary) !important;
+      border-color: var(--accent-primary) !important;
+      color: #FFFFFF !important;
+    }
+  </style>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-top-btn" aria-label="Scroll to Top">
+    <i class="ph ph-arrow-up"></i>
+  </button>
+
+</body>
+
+</html>

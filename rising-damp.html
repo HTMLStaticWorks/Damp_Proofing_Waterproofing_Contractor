@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rising Damp Treatment | HydroShield Engineering</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <!-- SEO tags -->
+  <meta name="description"
+    content="What is rising damp? Read about warning signs, historic building mortar risks, and chemical damp proof course solutions.">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body class="dark-theme">
+
+  <!-- Floating Glass Navbar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" id="main-nav">
+      <a href="index.html" class="logo-link">
+        <i class="ph ph-shield-checkered logo-icon"></i>
+        <span>HydroShield</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle Menu">
+        <i class="ph ph-list"></i>
+      </button>
+
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="home-dropdown">Home <i class="ph ph-caret-down"></i></a>
+          <ul class="dropdown-menu" id="home-menu">
+            <li><a href="index.html" class="dropdown-item">Home 1</a></li>
+            <li><a href="home-2.html" class="dropdown-item">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="rising-damp.html" class="nav-link active">Rising Damp</a></li>
+        <li><a href="condensation-control.html" class="nav-link">Condensation</a></li>
+        <li><a href="waterproofing-solutions.html" class="nav-link">Waterproofing</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        <button class="toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="ph ph-sun"></i>
+        </button>
+        <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- 1. Hero Section -->
+  <header class="section-alt" id="rising-damp-hero"
+    style="padding: 160px 20px 60px; text-align: center; border-bottom: 1px solid var(--border); display: block; background: var(--bg-secondary);">
+    <div class="container">
+      <span class="section-subtitle">Homeowner Guide</span>
+      <h2>Rising Damp Diagnostics & Treatment</h2>
+      <p style="max-width: 600px; margin: 10px auto 0; font-size: 18px;">Understanding groundwater capillary action in
+        historic walls and architectural treatment methods.</p>
+    </div>
+  </header>
+
+  <!-- 2. What Is Rising Damp Section -->
+  <section class="section" id="explanation">
+    <div class="container">
+      <div class="explanation-grid">
+        <div>
+          <h2>What Is Rising Damp?</h2>
+          <p style="margin-bottom: 16px;">Rising damp is the upwards movement of water from the ground through a
+            building's walls. This moisture moves through microscopic pores (capillaries) in bricks, stone, and mortar.
+          </p>
+          <p style="margin-bottom: 20px;">Groundwater contains soluble salts (nitrates and chlorides). As the damp
+            climbs up, it evaporates on interior surfaces, leaving behind hygroscopic salts. These salts pull moisture
+            from the surrounding air, keeping the wall permanently wet even during dry seasons.</p>
+
+          <h3 style="font-size: 20px; margin-bottom: 12px;">Warning Signs to Monitor</h3>
+          <ul style="list-style: none; font-size: 15px;">
+            <li style="margin-bottom: 8px;"><i class="ph ph-check-circle" style="color: var(--accent-secondary);"></i>
+              Tide marks rising up to 1 meter above floorboards.</li>
+            <li style="margin-bottom: 8px;"><i class="ph ph-check-circle" style="color: var(--accent-secondary);"></i>
+              Flaking plaster, white powdery crystals (efflorescence).</li>
+            <li style="margin-bottom: 8px;"><i class="ph ph-check-circle" style="color: var(--accent-secondary);"></i>
+              Decay or rot in timber skirting boards and flooring joists.</li>
+          </ul>
+        </div>
+        <div>
+          <img src="assets/images/damp-inspection.jpg" alt="Damp Inspection Meter"
+            style="width: 100%; border-radius: var(--radius-lg); box-shadow: 0 10px 30px var(--shadow);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Interactive Diagnostics Section -->
+  <section class="section-alt" id="diagnostics-wizard-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Self-Diagnosis Tool</span>
+        <h2>Interactive Moisture Calculator</h2>
+        <p>Answer a few questions about your wall symptoms to run a preliminary moisture risk evaluation.</p>
+      </div>
+
+      <!-- Wizard Component -->
+      <div class="diagnostic-wizard" id="diagnostic-wizard">
+        <!-- Progress Steps Tracker -->
+        <div class="wizard-progress">
+          <div class="progress-line">
+            <div class="progress-line-active" id="wizard-progress-line"></div>
+          </div>
+          <div class="step-dot active" data-step="0">
+            <span class="step-num">1</span>
+            <span class="step-title">Moisture</span>
+          </div>
+          <div class="step-dot" data-step="1">
+            <span class="step-num">2</span>
+            <span class="step-title">Era</span>
+          </div>
+          <div class="step-dot" data-step="2">
+            <span class="step-num">3</span>
+            <span class="step-title">Symptoms</span>
+          </div>
+          <div class="step-dot" data-step="3">
+            <span class="step-num">4</span>
+            <span class="step-title">Results</span>
+          </div>
+        </div>
+
+        <div class="wizard-content">
+          <!-- Step 1 -->
+          <div class="wizard-step active">
+            <h3 class="step-header">Step 1: Estimate Wall Moisture Level</h3>
+            <p class="step-desc">Select the option that best describes the touch and look of the damp areas.</p>
+            <div class="wizard-options">
+              <div class="wizard-option" data-category="moisture" data-value="low">
+                <div class="option-icon"><i class="ph ph-sun"></i></div>
+                <div class="option-info">
+                  <h4>Dry / Soft Humid</h4>
+                  <p>Cold to touch, dry surface with no visible discoloration.</p>
+                </div>
+              </div>
+              <div class="wizard-option" data-category="moisture" data-value="medium">
+                <div class="option-icon"><i class="ph ph-cloud-rain"></i></div>
+                <div class="option-info">
+                  <h4>Localized Wet Spots</h4>
+                  <p>Damp to touch, visible tide marks or dark spots near floor level.</p>
+                </div>
+              </div>
+              <div class="wizard-option" data-category="moisture" data-value="high">
+                <div class="option-icon"><i class="ph ph-drop"></i></div>
+                <div class="option-info">
+                  <h4>Severe Liquid Seepage</h4>
+                  <p>Running water, heavily saturated masonry, or dripping plaster.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="wizard-step">
+            <h3 class="step-header">Step 2: Property Construction Era</h3>
+            <p class="step-desc">The age of your property determines what type of damp-proofing was originally
+              installed.</p>
+            <div class="wizard-options">
+              <div class="wizard-option" data-category="age" data-value="modern">
+                <div class="option-icon"><i class="ph ph-house-line"></i></div>
+                <div class="option-info">
+                  <h4>Post-1980 Modern</h4>
+                  <p>Built with physical plastic damp proof courses and cavity wall insulation.</p>
+                </div>
+              </div>
+              <div class="wizard-option" data-category="age" data-value="midcentury">
+                <div class="option-icon"><i class="ph ph-house"></i></div>
+                <div class="option-info">
+                  <h4>1930 - 1980 Midcentury</h4>
+                  <p>Commonly constructed with slate, bitumen, or early felt damp courses.</p>
+                </div>
+              </div>
+              <div class="wizard-option" data-category="age" data-value="historic">
+                <div class="option-icon"><i class="ph ph-buildings"></i></div>
+                <div class="option-info">
+                  <h4>Pre-1930 Historic</h4>
+                  <p>Solid masonry walls built with breathable lime mortars and no original DPC.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="wizard-step">
+            <h3 class="step-header">Step 3: Visible Symptoms</h3>
+            <p class="step-desc">Select the primary symptoms observed on the affected wall surfaces.</p>
+            <div class="wizard-options">
+              <div class="wizard-option" data-category="symptom" data-value="mould">
+                <div class="option-icon"><i class="ph ph-warning-circle"></i></div>
+                <div class="option-info">
+                  <h4>Active Mold / Rot</h4>
+                  <p>Black mold spots on walls or rotting wood skirting boards.</p>
+                </div>
+              </div>
+              <div class="wizard-option" data-category="symptom" data-value="musty">
+                <div class="option-icon"><i class="ph ph-wind"></i></div>
+                <div class="option-info">
+                  <h4>Musty / Damp Odor</h4>
+                  <p>Stuffy smell in ground-floor rooms or basement areas.</p>
+                </div>
+              </div>
+              <div class="wizard-option" data-category="symptom" data-value="peeling">
+                <div class="option-icon"><i class="ph ph-paint-roller"></i></div>
+                <div class="option-info">
+                  <h4>Peeling Paint / Plaster</h4>
+                  <p>Flaking decorations, bubbling plaster, or powdery white salts.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Step 4 (Results Step) -->
+          <div class="wizard-step">
+            <div class="dashboard-result-container">
+              <!-- Radial Meter Column -->
+              <div class="dashboard-meter-col">
+                <div class="circular-meter">
+                  <svg class="meter-svg" viewBox="0 0 160 160">
+                    <circle class="meter-track" cx="80" cy="80" r="70" fill="none" stroke-width="12"></circle>
+                    <circle class="meter-fill" id="meter-fill" cx="80" cy="80" r="70" fill="none" stroke-width="12"
+                      stroke-dasharray="440" stroke-dashoffset="440"></circle>
+                  </svg>
+                  <div class="meter-center">
+                    <span class="meter-percent" id="result-percent">0%</span>
+                    <span class="meter-risk-label" id="result-risk-level">CALCULATING</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Evaluation Details Column -->
+              <div class="dashboard-details-col">
+                <h3 class="result-title" id="result-title">Analyzing your wall parameters...</h3>
+                <p class="result-text" id="result-text">Please complete all steps to see your custom diagnostic
+                  analysis.</p>
+
+                <div class="next-steps-box">
+                  <h4>Recommended Actions:</h4>
+                  <ul class="actions-list" id="actions-list">
+                    <li>Complete the interactive evaluation tool</li>
+                  </ul>
+                </div>
+
+                <div style="margin-top: 20px; display: flex; gap: 15px; justify-content: flex-start; flex-wrap: wrap;">
+                  <a href="contact.html" class="btn btn-primary"
+                    style="display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="ph ph-calendar"></i> Book Professional Survey
+                  </a>
+                  <button class="btn btn-secondary btn-recalc" id="btn-recalc-action"
+                    style="display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="ph ph-arrows-clockwise"></i> Start Over
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wizard-buttons">
+          <button class="btn btn-secondary btn-prev"><i class="ph ph-caret-left"></i> Previous</button>
+          <button class="btn btn-primary btn-next">Next Step <i class="ph ph-caret-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Our DPC Chemical Injection Process Section -->
+  <section class="section" id="dpc-treatment-methodology">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Treatment Path</span>
+        <h2>Our DPC Injection Process</h2>
+        <p>We insert a state-of-the-art chemical Damp Proof Course (DPC) into the mortar bed to create a permanent
+          water-repellent barrier.</p>
+      </div>
+
+      <div class="dpc-process-grid">
+        <div class="card" style="padding: 30px;">
+          <div style="font-size: 32px; color: var(--accent-primary); margin-bottom: 12px;"><i
+              class="ph ph-swimming-pool"></i></div>
+          <h3 style="font-size: 18px; margin-bottom: 10px;">1. Precision Drilling</h3>
+          <p style="font-size: 14px; color: var(--text-secondary);">We drill 12mm holes horizontally along the mortar
+            joint at the lowest accessible brick course, spaced at strict 100mm intervals.</p>
+        </div>
+
+        <div class="card" style="padding: 30px;">
+          <div style="font-size: 32px; color: var(--accent-primary); margin-bottom: 12px;"><i
+              class="ph ph-drop-half-bottom"></i></div>
+          <h3 style="font-size: 18px; margin-bottom: 10px;">2. Cream Injection</h3>
+          <p style="font-size: 14px; color: var(--text-secondary);">Injecting high-performance silane cream into the
+            holes. The active compound diffuses to form a continuous water-resistant barrier.</p>
+        </div>
+
+        <div class="card" style="padding: 30px;">
+          <div style="font-size: 32px; color: var(--accent-primary); margin-bottom: 12px;"><i
+              class="ph ph-intersect"></i></div>
+          <h3 style="font-size: 18px; margin-bottom: 10px;">3. Salt-Retarding Plaster</h3>
+          <p style="font-size: 14px; color: var(--text-secondary);">We replace salt-contaminated plaster with our
+            specialist salt-retardant backing to prevent residual damp from resurfacing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FAQ Section -->
+  <section class="section-alt" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Learn More</span>
+        <h2>Rising Damp FAQ</h2>
+        <p>Get answers to critical building inspection and damp proofing questions.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>How high can rising damp travel?</span>
+            <i class="ph ph-caret-down accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Due to gravity and capillary action constraints, rising damp rarely travels higher than 1.2 meters. If
+                you notice damp stains higher up, it is likely penetrating damp or condensation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>What is a Damp Proof Course (DPC)?</span>
+            <i class="ph ph-caret-down accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>A DPC is a waterproof barrier built into the lower wall of a house. Modern buildings use plastic
+                sheets, whereas older structures might have slate DPCs, or none at all, requiring modern chemical cream
+                injections.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>How long does a chemical DPC injection last?</span>
+            <i class="ph ph-caret-down accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Our high-performance silane cream injections are designed to diffuse fully through the mortar joint,
+                forming a permanent silicone barrier. They come with a 25-year insurance-backed guarantee and usually
+                outlast the building structure itself.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Is rising damp covered by standard home insurance?</span>
+            <i class="ph ph-caret-down accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Standard home insurance policies typically classify rising damp as a maintenance issue resulting from
+                natural wear and tear, rather than sudden accidental damage. Consequently, repairs are rarely covered,
+                which is why early professional intervention saves long-term costs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Can I paint or decorate immediately after DPC injection?</span>
+            <i class="ph ph-caret-down accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>No, walls must dry out completely before applying final paint or wallpaper. The general rule is 1 month
+                of drying time per 25mm of wall thickness. However, our process uses a salt-retarding backing plaster
+                that permits a damp-proof primer coat to speed up the process.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <i class="ph ph-shield-checkered logo-icon"></i>
+          <span>HydroShield</span>
+        </div>
+        <p class="footer-text">Premium architectural protection and moisture engineering services. Shielding property
+          values for over 25 years.</p>
+        <div style="display: flex; gap: 12px; font-size: 20px; margin-top: 15px;">
+          <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-title">Our Services</h3>
+        <ul class="footer-menu">
+          <li class="footer-item"><a href="rising-damp.html" class="footer-link">Rising Damp Treatment</a></li>
+          <li class="footer-item"><a href="condensation-control.html" class="footer-link">Condensation & Mold</a></li>
+          <li class="footer-item"><a href="waterproofing-solutions.html" class="footer-link">Basement Waterproofing</a>
+          </li>
+          <li class="footer-item"><a href="services.html" class="footer-link">Timber Preservation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Help & Info</h3>
+        <ul class="footer-menu">
+          <li class="footer-item"><a href="about.html" class="footer-link">About Us</a></li>
+          <li class="footer-item"><a href="faq.html" class="footer-link">FAQ Guide</a></li>
+          <li class="footer-item"><a href="contact.html" class="footer-link">Book Inspection</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact Info</h3>
+        <ul class="footer-menu">
+          <li class="footer-item" style="color: var(--text-secondary); font-size: 14px; margin-bottom: 10px;">
+            <i class="ph ph-phone" style="color: var(--accent-primary); margin-right: 8px;"></i>0800 123 4567
+          </li>
+          <li class="footer-item" style="color: var(--text-secondary); font-size: 14px; margin-bottom: 10px;">
+            <i class="ph ph-envelope" style="color: var(--accent-primary); margin-right: 8px;"></i>info@hydroshield.com
+          </li>
+          <li class="footer-item" style="color: var(--text-secondary); font-size: 14px; margin-bottom: 10px;">
+            <i class="ph ph-map-pin" style="color: var(--accent-primary); margin-right: 8px;"></i>Manchester, UK
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 HydroShield Building Protection. All rights reserved.</span>
+      <div style="display: flex; gap: 20px; font-size: 14px;">
+        <a href="login.html" class="footer-link">Staff Login</a>
+        <a href="signup.html" class="footer-link">Sign Up</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-top-btn" aria-label="Scroll to Top">
+    <i class="ph ph-arrow-up"></i>
+  </button>
+
+</body>
+
+</html>

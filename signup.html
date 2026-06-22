@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | HydroShield Engineering</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <!-- SEO tags -->
+  <meta name="description"
+    content="Create a HydroShield portal account to track building preservation plans, project logs, and warranty certificate updates.">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      background: var(--bg-primary);
+      position: relative;
+    }
+
+    .auth-wrapper {
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .auth-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: 0 20px 60px var(--shadow);
+      position: relative;
+    }
+
+    .auth-toggles-top-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 8px;
+      z-index: 1000;
+    }
+
+    .auth-card-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .auth-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .auth-logo i {
+      color: var(--accent-primary);
+      font-size: 22px;
+    }
+
+    .auth-card-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .auth-card-header i {
+      font-size: 42px;
+      color: var(--accent-primary);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .auth-card-header h2 {
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+
+    .auth-card-header p {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* Social Buttons */
+    .social-login-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .btn-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 11px 20px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      font-size: 14px;
+      font-weight: 500;
+      font-family: var(--font-family);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-social:hover {
+      border-color: var(--accent-primary);
+      background: rgba(27, 154, 170, 0.06);
+      transform: translateY(-1px);
+    }
+
+    .btn-social i,
+    .btn-social ion-icon {
+      font-size: 18px;
+    }
+
+    .btn-social.btn-google i,
+    .btn-social.btn-google ion-icon {
+      color: #EA4335;
+    }
+
+    .btn-social.btn-facebook i,
+    .btn-social.btn-facebook ion-icon {
+      color: #1877F2;
+    }
+
+    .btn-social.btn-apple i,
+    .btn-social.btn-apple ion-icon {
+      color: var(--text-primary);
+    }
+
+    .auth-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      color: var(--text-secondary);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-top: 15px;
+    }
+
+    .auth-divider::before,
+    .auth-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Password field */
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper .form-control {
+      padding-right: 44px;
+    }
+
+    .eye-toggle {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 18px;
+      padding: 4px;
+      line-height: 1;
+      transition: var(--transition);
+    }
+
+    .eye-toggle:hover {
+      color: var(--accent-primary);
+    }
+
+    /* Auth links hover underline */
+    .auth-link {
+      color: var(--accent-primary);
+      font-weight: 500;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .auth-link:hover {
+      text-decoration: underline;
+      color: var(--accent-primary);
+    }
+
+    /* Tab View Header parallel styling */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .auth-card-header {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        align-items: center;
+        gap: 16px;
+        text-align: start;
+      }
+
+      .auth-card-header i {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+
+      .auth-card-header h2 {
+        margin-bottom: 0;
+        font-size: 22px;
+      }
+
+      .auth-card-header p {
+        font-size: 13px;
+        line-height: 1.4;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      body {
+        align-items: flex-start !important;
+        padding-top: 80px !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="dark-theme">
+
+  <!-- Top Right Toggles (Outside the card) -->
+  <div class="auth-toggles-top-right">
+    <button class="toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+      <i class="ph ph-sun"></i>
+    </button>
+    <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL">
+      <i class="ph ph-arrows-left-right"></i>
+    </button>
+  </div>
+
+  <div class="auth-wrapper">
+    <div class="auth-card">
+
+      <!-- Logo row -->
+      <div class="auth-card-top">
+        <a href="index.html" class="auth-logo">
+          <i class="ph ph-shield-checkered"></i>
+          <span>HydroShield</span>
+        </a>
+      </div>
+
+      <!-- Heading -->
+      <div class="auth-card-header">
+        <i class="ph ph-user-plus"></i>
+        <h2>Create Account</h2>
+      </div>
+
+      <!-- Registration Form -->
+      <form id="auth-register-form" action="#" method="POST" style="text-align: left;">
+
+        <div class="form-group">
+          <label class="form-label" for="reg-name">Full Name</label>
+          <input type="text" id="reg-name" class="form-control" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-email">Email Address</label>
+          <input type="email" id="reg-email" class="form-control" placeholder="name@domain.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-password">Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="reg-password" class="form-control" placeholder="••••••••" required>
+            <button type="button" class="eye-toggle" id="password-reveal" aria-label="Toggle password visibility">
+              <i class="ph ph-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-confirm-password">Confirm Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="reg-confirm-password" class="form-control" placeholder="••••••••" required>
+            <button type="button" class="eye-toggle" id="confirm-password-reveal"
+              aria-label="Toggle password visibility">
+              <i class="ph ph-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div style="font-size: 13px; margin-bottom: 24px;">
+          <label style="display: flex; align-items: flex-start; gap: 8px; cursor: pointer; line-height: 1.4;">
+            <input type="checkbox" required style="accent-color: var(--accent-primary); margin-top: 2px;">
+            <span>I agree to the terms of service, portal usage policies, and data storage privacy terms.</span>
+          </label>
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Sign Up</button>
+        </div>
+
+      </form>
+
+      <div class="auth-divider">or continue with</div>
+
+      <!-- Social Login Buttons -->
+      <div class="social-login-group">
+        <button class="btn-social btn-google" type="button" id="login-google">
+          <ion-icon name="logo-google"></ion-icon> Continue with Google
+        </button>
+        <button class="btn-social btn-facebook" type="button" id="login-facebook">
+          <ion-icon name="logo-facebook"></ion-icon> Continue with Facebook
+        </button>
+        <button class="btn-social btn-apple" type="button" id="login-apple">
+          <ion-icon name="logo-apple"></ion-icon> Continue with Apple
+        </button>
+      </div>
+
+      <p style="font-size: 13px; margin-top: 24px; text-align: center; color: var(--text-secondary);">
+        Already have an account? <a href="login.html" class="auth-link">Log In</a>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Password toggle for signup
+    const passwordReveal = document.getElementById('password-reveal');
+    const signupPass = document.getElementById('reg-password');
+    if (passwordReveal && signupPass) {
+      passwordReveal.addEventListener('click', () => {
+        const isHidden = signupPass.type === 'password';
+        signupPass.type = isHidden ? 'text' : 'password';
+        passwordReveal.innerHTML = isHidden ? '<i class="ph ph-eye-slash"></i>' : '<i class="ph ph-eye"></i>';
+      });
+    }
+
+    const confirmPasswordReveal = document.getElementById('confirm-password-reveal');
+    const signupConfirmPass = document.getElementById('reg-confirm-password');
+    if (confirmPasswordReveal && signupConfirmPass) {
+      confirmPasswordReveal.addEventListener('click', () => {
+        const isHidden = signupConfirmPass.type === 'password';
+        signupConfirmPass.type = isHidden ? 'text' : 'password';
+        confirmPasswordReveal.innerHTML = isHidden ? '<i class="ph ph-eye-slash"></i>' : '<i class="ph ph-eye"></i>';
+      });
+    }
+
+    // Form submit validation
+    const form = document.getElementById('auth-register-form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const password = signupPass.value;
+        const confirmPassword = signupConfirmPass.value;
+        if (password !== confirmPassword) {
+          alert('Passwords do not match. Please verify your password entry.');
+          return;
+        }
+        alert('Portal registration simulation successful.');
+        form.reset();
+      });
+    }
+
+    // Social button simulations
+    document.getElementById('login-google')?.addEventListener('click', () => alert('Google registration – coming soon.'));
+    document.getElementById('login-facebook')?.addEventListener('click', () => alert('Facebook registration – coming soon.'));
+    document.getElementById('login-apple')?.addEventListener('click', () => alert('Apple registration – coming soon.'));
+  </script>
+</body>
+
+</html>

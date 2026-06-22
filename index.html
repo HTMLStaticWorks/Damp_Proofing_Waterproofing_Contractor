@@ -1,1 +1,400 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HydroShield Engineering | Premium Damp Proofing & Waterproofing</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <!-- SEO tags -->
+  <meta name="description"
+    content="Professional damp proofing, structural waterproofing, and property restoration solutions. Book your free diagnostic building survey today.">
+  <meta name="keywords"
+    content="rising damp, basement waterproofing, condensation control, timber preservation, property survey, mold control">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body class="dark-theme">
+
+  <!-- Floating Glass Navbar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" id="main-nav">
+      <a href="index.html" class="logo-link">
+        <i class="ph ph-shield-checkered logo-icon"></i>
+        <span>HydroShield</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle Menu">
+        <i class="ph ph-list"></i>
+      </button>
+
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="#" class="nav-link dropdown-toggle active" id="home-dropdown">Home <i
+              class="ph ph-caret-down"></i></a>
+          <ul class="dropdown-menu" id="home-menu">
+            <li><a href="index.html" class="dropdown-item">Home 1</a></li>
+            <li><a href="home-2.html" class="dropdown-item">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="rising-damp.html" class="nav-link">Rising Damp</a></li>
+        <li><a href="condensation-control.html" class="nav-link">Condensation</a></li>
+        <li><a href="waterproofing-solutions.html" class="nav-link">Waterproofing</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        <button class="toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="ph ph-sun"></i>
+        </button>
+        <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero Section with Canvas Animation #1 -->
+  <section class="hero hero-banner-bg" id="hero-sec">
+    <div class="hero-canvas-container">
+      <canvas id="hero-canvas-1" class="hero-canvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Protect Your Property From Damp, Moisture & Water Damage</h1>
+      <p class="hero-subtitle">Professional damp proofing and waterproofing solutions for rising damp, condensation,
+        penetrating damp, basements, and structural protection.</p>
+      <div class="hero-buttons">
+        <a href="about.html" class="btn btn-secondary"
+          style="background-color: var(--bg-card); color: var(--text-primary); border-color: var(--accent-primary);">Get
+          Expert Advice</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Damp Problems Section -->
+  <section class="section-alt" id="problems">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Diagnostics & Analysis</span>
+        <h2>Common Damp Problems</h2>
+        <p>Moisture ingress ruins buildings from the inside out. Identifying symptoms early saves thousands in
+          structural renovations.</p>
+      </div>
+
+      <div class="card-grid card-grid-3col">
+        <!-- Problem Card 1 -->
+        <div class="card">
+          <img src="assets/images/rising-damp.jpg" alt="Rising Damp" class="card-img">
+          <h3 class="card-title">Rising Damp</h3>
+          <p class="card-text">Groundwater travelling upwards through masonry structures via capillary action, leaving
+            hygroscopic salts and structural damage.</p>
+          <div class="card-footer">
+            <a href="rising-damp.html" class="btn btn-secondary">Learn Treatment</a>
+          </div>
+        </div>
+
+        <!-- Problem Card 2 -->
+        <div class="card">
+          <img src="assets/images/penerating-damp.jpg" alt="Penetrating Damp" class="card-img">
+          <h3 class="card-title">Penetrating Damp</h3>
+          <p class="card-text">External moisture penetrating through structural cracks, defective bricks, or faulty
+            roofing systems causing internal wet rot.</p>
+          <div class="card-footer">
+            <a href="penetrating-damp.html" class="btn btn-secondary">Learn Treatment</a>
+          </div>
+        </div>
+
+        <!-- Problem Card 3 -->
+        <div class="card">
+          <img src="assets/images/condensation.jpg" Condensation & Mold" class="card-img">
+          <h3 class="card-title">Condensation & Mold</h3>
+          <p class="card-text">Excess humidity on cold interior surfaces creating the perfect environment for toxic
+            black mold outbreaks and respiratory risks.</p>
+          <div class="card-footer">
+            <a href="condensation-control.html" class="btn btn-secondary">Learn Treatment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Property Risk Assessment Section -->
+  <section class="section" id="risk-assessment">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Property Security</span>
+        <h2>Property Risk Assessment</h2>
+        <p>Uncontrolled moisture degrades structural integrity and devalues your home. Discover the risks and protect
+          your asset.</p>
+      </div>
+
+      <div class="card-grid card-grid-3col" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="card">
+          <img src="assets/images/foundation.jpg" alt="Foundation Decay" class="card-img">
+          <h3 class="card-title">Foundation Decay</h3>
+          <p class="card-text">Continuous contact with groundwater softens brickwork mortar joints, threatening the
+            building load capacity.</p>
+        </div>
+        <div class="card">
+          <img src="assets/images/timber.jpg" alt="Timber Rot" class="card-img">
+          <h3 class="card-title">Timber Rot</h3>
+          <p class="card-text">Damp floors and joists encourage spores that cause dry rot, destroying support structural
+            beams in timber.</p>
+        </div>
+        <div class="card">
+          <img src="assets/images/hazards.jpg" alt="Health Hazards" class="card-img">
+          <h3 class="card-title">Health Hazards</h3>
+          <p class="card-text">Toxic spores trigger or exacerbate asthma, bronchitis, and common respiratory allergies
+            in residents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Solutions Showcase -->
+  <section class="section-alt" id="treatments">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Engineering Solutions</span>
+        <h2>Our Protection Framework</h2>
+        <p>Our tailored damp proof injection creams and structural membranes form an impenetrable barrier around your
+          building.</p>
+      </div>
+
+      <div class="card-grid card-grid-3col">
+        <div class="card">
+          <img src="assets/images/damp-proof.jpg" alt="Damp Proof Course" class="card-img">
+          <h3 class="card-title">Damp Proof Course</h3>
+          <p class="card-text">Inserting chemical barriers or physical membranes inside wall masonry to repel ascending
+            capillary water.</p>
+          <div class="card-footer">
+            <a href="waterproofing-solutions.html" class="btn btn-secondary">System Details</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/basement-tank.jpg" alt="Basement Tanking" class="card-img">
+          <h3 class="card-title">Basement Tanking</h3>
+          <p class="card-text">Applying premium cementitious coatings and drainage cavity membranes to turn below-ground
+            rooms dry.</p>
+          <div class="card-footer">
+            <a href="waterproofing-solutions.html" class="btn btn-secondary">System Details</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/ventilation.jpg" alt="Ventilation Systems" class="card-img">
+          <h3 class="card-title">Ventilation Systems</h3>
+          <p class="card-text">Installing Positive Input Ventilation (PIV) systems to refresh indoor humidity profiles
+            automatically.</p>
+          <div class="card-footer">
+            <a href="condensation-control.html" class="btn btn-secondary">System Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Projects Section -->
+  <section class="section" id="recent-projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Our Portfolio</span>
+        <h2>Recent Preservation Projects</h2>
+        <p>Explore real residential and commercial waterproofing jobs carried out by our diagnostic preservation
+          engineers.</p>
+      </div>
+
+      <div class="card-grid">
+        <!-- Project 1 -->
+        <div class="card">
+          <img src="assets/images/basement-tank.jpg" alt="Basement Waterproofing"
+            style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 20px;">
+          <h3 class="card-title">Basement Tanking System</h3>
+          <p class="card-text">Complete Type C structural cavity drainage membrane setup on a historical brick
+            foundation basement.</p>
+          <div class="card-footer">
+            <a href="project-details.html" class="btn btn-secondary">View Case Study</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card">
+          <img src="assets/images/masonary.jpg" alt="Exterior Wall Protection"
+            style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 20px;">
+          <h3 class="card-title">Masonry Protection Coating</h3>
+          <p class="card-text">Applying breathable waterproofing creams to historic limestone external structures
+            showing signs of freeze-thaw damage.</p>
+          <div class="card-footer">
+            <a href="project-details.html" class="btn btn-secondary">View Case Study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section-alt" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Client Reviews</span>
+        <h2>Property Owners' Trust</h2>
+        <p>Here is what home and building managers say about our engineering diagnostics and damp waterproofing
+          treatments.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div style="display: flex; gap: 4px; color: var(--accent-third); margin-bottom: 12px;">
+            <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i
+              class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
+          </div>
+          <h3 class="card-title" style="font-size: 18px;">Highly Professional Diagnosis</h3>
+          <p class="card-text">"The survey team diagnosed that our mold issue was coming from cavity wall insulation
+            faults rather than rising damp. Saved us huge treatment costs!"</p>
+          <div style="margin-top: 15px; font-weight: 500; font-size: 14px; color: var(--accent-primary);">
+            - Dr. Marcus Vance, Commercial Owner
+          </div>
+        </div>
+        <div class="card">
+          <div style="display: flex; gap: 4px; color: var(--accent-third); margin-bottom: 12px;">
+            <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i
+              class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
+          </div>
+          <h3 class="card-title" style="font-size: 18px;">Perfect Dry Basement</h3>
+          <p class="card-text">"Our basement flooded every autumn. HydroShield installed their cavity drain membrane
+            system, and it has been bone dry for three years now."</p>
+          <div style="margin-top: 15px; font-weight: 500; font-size: 14px; color: var(--accent-primary);">
+            - Sarah K., Residential Homeowner
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Survey Process Section -->
+  <section class="section" id="survey-process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Simple Path</span>
+        <h2>Our Diagnostic Survey Process</h2>
+        <p>Get a detailed, engineering-grade moisture report with transparent structural preservation options.</p>
+      </div>
+
+      <div class="survey-process-grid">
+        <div>
+          <div
+            style="width: 50px; height: 50px; background: rgba(27, 154, 170, 0.1); color: var(--accent-primary); font-weight: 600; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 16px; font-size: 18px;">
+            1</div>
+          <h3 style="font-size: 20px; margin-bottom: 8px;">Book Online</h3>
+          <p style="font-size: 14px;">Use our quick booking form to select structural damp symptoms and schedule
+            inspection.</p>
+        </div>
+        <div>
+          <div
+            style="width: 50px; height: 50px; background: rgba(27, 154, 170, 0.1); color: var(--accent-primary); font-weight: 600; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 16px; font-size: 18px;">
+            2</div>
+          <h3 style="font-size: 20px; margin-bottom: 8px;">Onsite Diagnostics</h3>
+          <p style="font-size: 14px;">An engineer audits wall moisture profiles with specialist thermal and digital
+            meters.</p>
+        </div>
+        <div>
+          <div
+            style="width: 50px; height: 50px; background: rgba(27, 154, 170, 0.1); color: var(--accent-primary); font-weight: 600; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 16px; font-size: 18px;">
+            3</div>
+          <h3 style="font-size: 20px; margin-bottom: 8px;">Technical Report</h3>
+          <p style="font-size: 14px;">Receive a complete masonry moisture diagram and step-by-step preservation plan.
+          </p>
+        </div>
+        <div>
+          <div
+            style="width: 50px; height: 50px; background: rgba(27, 154, 170, 0.1); color: var(--accent-primary); font-weight: 600; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 16px; font-size: 18px;">
+            4</div>
+          <h3 style="font-size: 20px; margin-bottom: 8px;">Implementation</h3>
+          <p style="font-size: 14px;">Our technicians apply long-term treatments backed by our 25-year structural
+            warranty.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="signup.html" class="btn btn-primary">Sign Up Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <i class="ph ph-shield-checkered logo-icon"></i>
+          <span>HydroShield</span>
+        </div>
+        <p class="footer-text">Premium architectural protection and moisture engineering services. Shielding property
+          values for over 25 years.</p>
+        <div style="display: flex; gap: 12px; font-size: 20px; margin-top: 15px;">
+          <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-title">Our Services</h3>
+        <ul class="footer-menu">
+          <li class="footer-item"><a href="rising-damp.html" class="footer-link">Rising Damp Treatment</a></li>
+          <li class="footer-item"><a href="condensation-control.html" class="footer-link">Condensation & Mold</a></li>
+          <li class="footer-item"><a href="waterproofing-solutions.html" class="footer-link">Basement Waterproofing</a>
+          </li>
+          <li class="footer-item"><a href="services.html" class="footer-link">Timber Preservation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Help & Info</h3>
+        <ul class="footer-menu">
+          <li class="footer-item"><a href="about.html" class="footer-link">About Us</a></li>
+          <li class="footer-item"><a href="faq.html" class="footer-link">FAQ Guide</a></li>
+          <li class="footer-item"><a href="contact.html" class="footer-link">Book Inspection</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact Info</h3>
+        <ul class="footer-menu">
+          <li class="footer-item" style="color: var(--text-secondary); font-size: 14px; margin-bottom: 10px;">
+            <i class="ph ph-phone" style="color: var(--accent-primary); margin-right: 8px;"></i>0800 123 4567
+          </li>
+          <li class="footer-item" style="color: var(--text-secondary); font-size: 14px; margin-bottom: 10px;">
+            <i class="ph ph-envelope" style="color: var(--accent-primary); margin-right: 8px;"></i>info@hydroshield.com
+          </li>
+          <li class="footer-item" style="color: var(--text-secondary); font-size: 14px; margin-bottom: 10px;">
+            <i class="ph ph-map-pin" style="color: var(--accent-primary); margin-right: 8px;"></i>Manchester, UK
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 HydroShield Building Protection. All rights reserved.</span>
+      <div style="display: flex; gap: 20px; font-size: 14px;">
+        <a href="login.html" class="footer-link">Staff Login</a>
+        <a href="signup.html" class="footer-link">Sign Up</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-top-btn" aria-label="Scroll to Top">
+    <i class="ph ph-arrow-up"></i>
+  </button>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
