@@ -227,7 +227,7 @@
 
       .auth-card-header h2 {
         margin-bottom: 0;
-        font-size: 22px;
+        font-size: 20px;
       }
 
       .auth-card-header p {
@@ -241,6 +241,11 @@
         align-items: flex-start !important;
         padding-top: 80px !important;
       }
+    }
+
+    html[dir="rtl"] .auth-toggles-top-right {
+      right: auto !important;
+      left: 20px !important;
     }
   </style>
 </head>
@@ -270,8 +275,7 @@
 
       <!-- Heading -->
       <div class="auth-card-header">
-        <i class="ph ph-user-plus"></i>
-        <h2>Create Account</h2>
+        <h4>Create Account</h4>
       </div>
 
       <!-- Registration Form -->

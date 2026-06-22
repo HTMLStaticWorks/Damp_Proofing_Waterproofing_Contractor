@@ -38,6 +38,8 @@ html[dir="rtl"] .nav-actions {
 /* Arrow/caret icons mirror */
 html[dir="rtl"] .ph-arrow-right,
 html[dir="rtl"] .ph-caret-right,
+html[dir="rtl"] .ph-arrow-left,
+html[dir="rtl"] .ph-caret-left,
 html[dir="rtl"] .ph-arrow-square-out {
   transform: scaleX(-1);
   display: inline-block;
@@ -65,7 +67,7 @@ html[dir="rtl"] .breadcrumb-separator {
 }
 
 /* Step Wizard elements */
-html[dir="rtl"] .step-number {
+html[dir="rtl"] .step-num {
   margin-left: 15px;
   margin-right: 0;
 }
@@ -80,4 +82,69 @@ html[dir="rtl"] .eye-toggle {
   left: 12px;
   right: auto;
 }
+
+/* Authentication toggles positioning mirror in RTL */
+html[dir="rtl"] .auth-toggles-top-right {
+  right: auto !important;
+  left: 20px !important;
+}
+
+/* Warning checklist alignment in RTL */
+html[dir="rtl"] .warning-list {
+  text-align: right;
+}
+
+/* Active progress line starts on right in RTL */
+html[dir="rtl"] .wizard-progress .progress-line-active {
+  left: auto;
+  right: 0;
+}
+
+/* Comparison table alignment in RTL */
+html[dir="rtl"] .comparison-table th,
+html[dir="rtl"] .comparison-table td {
+  text-align: right !important;
+}
+
+/* Three forms grid alignment in RTL */
+html[dir="rtl"] .three-forms-grid {
+  text-align: right;
+}
+
+/* Accordion alignment in RTL */
+html[dir="rtl"] .accordion-header,
+html[dir="rtl"] .accordion-body p {
+  text-align: right !important;
+}
+
+/* Mobile & Tablet Footer Alignment mirror in RTL */
+@media (max-width: 1024px) {
+  html[dir="rtl"] .footer,
+  html[dir="rtl"] .footer-grid,
+  html[dir="rtl"] .footer-logo,
+  html[dir="rtl"] .footer-text,
+  html[dir="rtl"] .footer-title,
+  html[dir="rtl"] .footer-menu,
+  html[dir="rtl"] .footer-item,
+  html[dir="rtl"] .footer-link,
+  html[dir="rtl"] .footer-bottom,
+  html[dir="rtl"] .footer-copy,
+  html[dir="rtl"] .footer * {
+    text-align: right !important;
+    justify-content: flex-start !important; /* flex-start is right in RTL */
+  }
+
+  html[dir="rtl"] .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  html[dir="rtl"] .footer-bottom > div {
+    justify-content: flex-start !important;
+  }
+}
+
+
+
+
 

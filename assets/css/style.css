@@ -418,6 +418,17 @@ a {
   color: var(--accent-primary);
 }
 
+.footer-social-link {
+  color: var(--text-secondary);
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.footer-social-link:hover {
+  color: var(--accent-primary);
+  transform: translateY(-3px);
+}
+
 .footer-bottom {
   max-width: var(--container-width);
   margin: 0 auto;
@@ -686,7 +697,8 @@ a {
   text-align: left;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover,
+.dropdown-item.active {
   color: var(--accent-primary);
   background-color: rgba(27, 154, 170, 0.08);
 }
@@ -1443,11 +1455,12 @@ body.dark-theme .wizard-option.selected {
   justify-content: space-between;
   align-items: center;
   padding: 20px 24px;
-  text-align: left;
+  text-align: left !important;
   cursor: pointer;
   outline: none;
   transition: var(--transition);
 }
+
 
 .accordion-header span {
   font-family: var(--font-family);
@@ -1492,6 +1505,9 @@ body.dark-theme .wizard-option.selected {
   font-size: 15px;
   line-height: 1.6;
   color: var(--text-secondary);
+  text-align: left !important;
+}
+
 }
 
 /* --- Contact Page Social Hover Style --- */
@@ -1611,3 +1627,67 @@ body.dark-theme .google-map-iframe {
     min-height: 72px;
   }
 }
+
+/* Warning checklist alignment adjustments */
+.warning-list {
+  list-style: none;
+  font-size: 15px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.warning-list li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.warning-list li i {
+  color: var(--accent-secondary);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* Waterproofing solutions comparison table alignment */
+.comparison-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.comparison-table th,
+.comparison-table td {
+  width: 25%;
+  text-align: left !important;
+  padding: 16px !important;
+}
+
+/* Waterproofing solutions three forms grid */
+.three-forms-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 12px 15px;
+  font-size: 15px;
+  text-align: start;
+}
+
+@media (max-width: 480px) {
+  .three-forms-grid {
+    grid-template-columns: 180px 1fr;
+    gap: 10px 10px;
+  }
+}
+
+/* FAQ Mobile alignment and padding overrides */
+@media (max-width: 768px) {
+  .accordion-header {
+    padding: 16px !important;
+  }
+  .accordion-body {
+    padding: 0 16px 16px !important;
+  }
+}
+
+
